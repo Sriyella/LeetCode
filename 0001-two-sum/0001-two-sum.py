@@ -1,10 +1,13 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            if i+1<len(nums):
-                for j in range(i+1, len(nums)):
-                    if nums[i]+nums[j]==target:
-                        return [i, j]
+        num_dict = dict()
+        for i in range(0, len(nums)):
+            num_dict[nums[i]] = i
+        for i in range(0,len(nums)):
+            b = target - nums[i]
+            idx = num_dict.get(b, 'NA')
+            if idx!='NA' and idx!=i:
+                return [i, num_dict[b]]
             
         
                         
