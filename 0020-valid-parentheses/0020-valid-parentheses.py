@@ -2,8 +2,6 @@ class Solution:
     def isValid(self, s: str) -> bool:
         b = {'(':')', '[':']', '{':'}'}
         o = list()
-        if len(s)==1:
-            return False
         for i in s:
             if i==0:
                 if i in b:
