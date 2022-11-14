@@ -10,7 +10,6 @@ class Solution:
         dup = head
 
         while dup:
-            #print(i, a, (i+1)//2)
             if (i+1)//2 >= a:
                 out = head
                 head = head.next
